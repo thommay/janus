@@ -128,8 +128,9 @@ vim_plugin_task "git",              "git://github.com/tpope/vim-git.git"
 vim_plugin_task "haml",             "git://github.com/tpope/vim-haml.git"
 vim_plugin_task "indent_object",    "git://github.com/michaeljsmith/vim-indent-object.git"
 vim_plugin_task "javascript",       "git://github.com/pangloss/vim-javascript.git"
+vim_plugin_task "jslint",           "git://github.com/hallettj/jslint.vim.git"
 vim_plugin_task "markdown_preview", "git://github.com/robgleeson/vim-markdown-preview.git"
-vim_plugin_task "nerdtree",         "git://github.com/scrooloose/nerdtree.git"
+vim_plugin_task "nerdtree",         "git://github.com/wycats/nerdtree.git"
 vim_plugin_task "nerdcommenter",    "git://github.com/scrooloose/nerdcommenter.git"
 vim_plugin_task "surround",         "git://github.com/tpope/vim-surround.git"
 vim_plugin_task "taglist",          "http://vim.sourceforge.net/scripts/download_script.php?src_id=7701"
@@ -148,6 +149,7 @@ vim_plugin_task "unimpaired",       "git://github.com/tpope/vim-unimpaired.git"
 vim_plugin_task "searchfold",       "git://github.com/vim-scripts/searchfold.vim.git"
 vim_plugin_task "textobj-user", "https://github.com/kana/vim-textobj-user.git"
 vim_plugin_task "textobj-ruby", "https://github.com/nelstrom/vim-textobj-rubyblock.git"
+vim_plugin_task "irblack",          "git://github.com/wgibbs/vim-irblack.git"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
@@ -226,5 +228,6 @@ task :default => [
   :link_vimrc
 ]
 
+desc "Clear out all build artifacts and rebuild the latest Janus"
 task :upgrade => [:clean, :pull, :default]
 
