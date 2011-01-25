@@ -142,15 +142,15 @@ vim_plugin_task "rails",            "git://github.com/tpope/vim-rails.git"
 vim_plugin_task "rspec",            "git://github.com/taq/vim-rspec.git"
 vim_plugin_task "zoomwin",          "http://www.vim.org/scripts/download_script.php?src_id=9865"
 vim_plugin_task "snipmate",         "git://github.com/msanders/snipmate.vim.git"
-vim_plugin_task "delimitmate",      "git://github.com/Raimondi/delimitMate.git"
 vim_plugin_task "markdown",         "git://github.com/tpope/vim-markdown.git"
 vim_plugin_task "align",            "git://github.com/tsaleh/vim-align.git"
 vim_plugin_task "unimpaired",       "git://github.com/tpope/vim-unimpaired.git"
 vim_plugin_task "searchfold",       "git://github.com/vim-scripts/searchfold.vim.git"
 vim_plugin_task "matchit",          "http://www.vim.org/scripts/download_script.php?src_id=8196"
-vim_plugin_task "textobj-user", "https://github.com/kana/vim-textobj-user.git"
-vim_plugin_task "textobj-ruby", "https://github.com/nelstrom/vim-textobj-rubyblock.git"
+vim_plugin_task "textobj-user",     "https://github.com/kana/vim-textobj-user.git"
+vim_plugin_task "textobj-ruby",     "https://github.com/nelstrom/vim-textobj-rubyblock.git"
 vim_plugin_task "irblack",          "git://github.com/wgibbs/vim-irblack.git"
+vim_plugin_task "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.git"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
@@ -220,6 +220,7 @@ task :clean do
   system "git clean -dfx"
 end
 
+desc "Pull the latest"
 task :pull do
   system "git pull"
 end
