@@ -95,6 +95,9 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
+" Configure gist
+let g:gist_detect_filetype = 1
+
 " Unimpaired configuration
 " Bubble single lines
 nmap <C-Up> [e

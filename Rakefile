@@ -200,6 +200,10 @@ vim_plugin_task "mustasche" do
   sh "curl http://github.com/defunkt/mustache/raw/master/contrib/mustache.vim > syntax/mustache.vim"
 end
 
+vim_plugin_task "gist" do
+  sh "curl http://www.vim.org/scripts/download_script.php?src_id=14679 > plugin/gist.vim"
+end
+
 desc "Update the documentation"
 task :update_docs do
   puts "Updating VIM Documentation..."
