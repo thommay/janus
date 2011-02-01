@@ -149,8 +149,10 @@ vim_plugin_task "searchfold",       "git://github.com/vim-scripts/searchfold.vim
 vim_plugin_task "matchit",          "http://www.vim.org/scripts/download_script.php?src_id=8196"
 vim_plugin_task "textobj-user",     "https://github.com/kana/vim-textobj-user.git"
 vim_plugin_task "textobj-ruby",     "https://github.com/nelstrom/vim-textobj-rubyblock.git"
+vim_plugin_task "endwise",          "git://github.com/tpope/vim-endwise.git"
 vim_plugin_task "irblack",          "git://github.com/wgibbs/vim-irblack.git"
 vim_plugin_task "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.git"
+vim_plugin_task "syntastic",        "git://github.com/scrooloose/syntastic.git"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
@@ -195,9 +197,11 @@ end
 vim_plugin_task "molokai" do
   sh "curl http://www.vim.org/scripts/download_script.php?src_id=9750 > colors/molokai.vim"
 end
-
 vim_plugin_task "mustasche" do
   sh "curl http://github.com/defunkt/mustache/raw/master/contrib/mustache.vim > syntax/mustache.vim"
+end
+vim_plugin_task "vwilight" do
+  sh "curl https://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim > colors/vwilight.vim"
 end
 
 vim_plugin_task "gist" do
