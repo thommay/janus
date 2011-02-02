@@ -4,11 +4,13 @@ nerdtree_plugin
 
 after
 autoload
+cookies
 doc
 plugin
 ruby
 snippets
 syntax
+syntax_checkers
 ftdetect
 ftplugin
 colors
